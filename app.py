@@ -103,12 +103,12 @@ def movie_recommendation():
 
 def get_movie():
     now = datetime.datetime.now()
-    day = now.day
-    return food_list[int(day)%15]
+    day = now.microsecond
+    return movie_list[int(day)%15]
 
 
-#---------------- Food List ----------------------------
-food_list = ("The Shawshank Redemption", "The Godfather", "The Godfather: Part II", "The Dark Knight", "12 Angry Men", "Schindler's List", "The Lord of the Rings: The Return of the King", "Pulp Fiction", "The Good, the Bad and the Ugly", "Fight Club", "The Lord of the Rings: The Fellowship of the Ring", "Forrest Gump", "Star Wars: Episode V - The Empire Strikes Back", "Inception", "The Lord of the Rings: The Two Towers")
+#---------------- Movie List ----------------------------
+movie_list = ("The Shawshank Redemption", "The Godfather", "The Godfather: Part II", "The Dark Knight", "12 Angry Men", "Schindler's List", "The Lord of the Rings: The Return of the King", "Pulp Fiction", "The Good, the Bad and the Ugly", "Fight Club", "The Lord of the Rings: The Fellowship of the Ring", "Forrest Gump", "Star Wars: Episode V - The Empire Strikes Back", "Inception", "The Lord of the Rings: The Two Towers")
 
 
 if __name__ == '__main__':
