@@ -17,12 +17,12 @@ ASK_VERIFY_TIMESTAMP_DEBUG = True
 def main_function():
     return movie_recommendation()
 
-	
+    
 @ask.intent("AMAZON.StopIntent")
 def stop_function():
     return statement("See you tomorrow")
 
-	
+    
 @ask.intent("AMAZON.CancelIntent")
 def cancel_function():
     return statement("See you tomorrow")
@@ -116,8 +116,8 @@ if __name__ == '__main__':
         verify = str(os.environ.get('ASK_VERIFY_REQUESTS', '')).lower()
         if verify == 'false':
             app.config['ASK_VERIFY_REQUESTS'] = False
-	app.config['ASK_APPLICATION_ID'] = 'amzn1.ask.skill.2a1f76a3-6278-4ca8-b64e-5340c69c5da9'
-	app.config['ASK_VERIFY_REQUESTS'] = True
-	app.config['ASK_VERIFY_TIMESTAMP_DEBUG'] = True
+    app.config['ASK_APPLICATION_ID'] = 'amzn1.ask.skill.2a1f76a3-6278-4ca8-b64e-5340c69c5da9'
+    app.config['ASK_VERIFY_REQUESTS'] = True
+    app.config['ASK_VERIFY_TIMESTAMP_DEBUG'] = True
     app.run(debug=True)
 
